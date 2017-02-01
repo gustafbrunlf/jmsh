@@ -1,5 +1,5 @@
-<footer class="content-info">
+<footer class="footer">
   <div class="container">
-    <?php dynamic_sidebar('sidebar-footer'); ?>
+  	<?php wp_nav_menu(); ?>
   </div>
 </footer>

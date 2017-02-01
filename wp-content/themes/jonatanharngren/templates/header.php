@@ -1,12 +1,12 @@
-<header class="banner">
+<?php 
+  $pages = get_pages(array(
+      'meta_key' => '_wp_page_template',
+      'meta_value' => 'template-main.php'
+  ));
+?>
+<header class="header">
   <div class="container">
-    <a class="brand" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
-    <nav class="nav-primary">
-      <?php
-      if (has_nav_menu('primary_navigation')) :
-        wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']);
-      endif;
-      ?>
-    </nav>
+    <a class="header__logo" href="<?= get_permalink( $pages[0]->ID ) ?>"><img src="<?=get_template_directory_uri()?>/dist/images/logowhite.svg"></a>
+    <div class="header__name"><?php bloginfo('name'); ?></div>
   </div>
 </header>

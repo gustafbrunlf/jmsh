@@ -1,0 +1,32 @@
+.home {
+	header {
+		display: none;
+	}
+}
+
+.header {
+	background-color: $black;
+
+	.container {
+		position: relative;
+		min-height: 60px;
+	}
+
+	&__logo {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		img {
+			height: 43px;
+			width: 213px;
+		}
+	}
+
+	&__name {
+		float: right;
+		line-height: 60px;
+		color: $white;
+	}
+}
