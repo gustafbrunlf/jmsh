@@ -1,5 +1,9 @@
 .footer {
 	background-color: $black;
+	
+	&__container {
+		@extend .container;
+	}
 
 	.menu {
 		margin-bottom: 0;

@@ -22,6 +22,6 @@
     }
   },
   "config": {
-    "devUrl": "http://localhost:8888/jmsh/main/"
+    "devUrl": "http://localhost:8888/jmsh/"
   }
 }

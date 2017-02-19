@@ -63,7 +63,7 @@ define('NONCE_SALT',       'efpkBrb[U4eAR,)p=H$L[hw=e-+PqlL!2r->VyN`s#i#tJ`UU~Yv
  * Du kan ha flera installationer i samma databas om du ger varje installation ett unikt
  * prefix. Endast siffror, bokstäver och understreck!
  */
-$table_prefix  = 'wp_';
+$table_prefix  = 'jsmh_';
 
 /** 
  * För utvecklare: WordPress felsökningsläge. 

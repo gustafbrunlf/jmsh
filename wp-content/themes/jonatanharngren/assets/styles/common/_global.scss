@@ -3,7 +3,15 @@
 	padding-right: 0;
 }
 
-body {
+.page-template-template-start {
+	background-color: $white;
+}
+
+.page-template-template-main {
+	background-color: $black;
+}
+
+.page {
 	display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -12,4 +20,9 @@ body {
 .wrap {
     flex: 1 0 auto;
     width: 100%;
+}
+
+img {
+	height: auto;
+	width: 100%;
 }

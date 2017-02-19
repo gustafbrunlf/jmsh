@@ -19,6 +19,16 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
+
+        function fadeOutLogo( element, logo ) {
+          $(document).on("click", element, function(){
+            var $content = $(element).add(logo);
+            $content.animate({opacity: "0"}, 300);
+          });
+        }
+
+        fadeOutLogo('.start__close-logo', '.start__logo');
+        fadeOutLogo('.header__close-logo', '.header__logo');
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
@@ -28,15 +38,48 @@
     'home': {
       init: function() {
         // JavaScript to be fired on the home page
+
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
       }
     },
     // About us page, note the change from about-us to about_us.
-    'about_us': {
+    'main': {
       init: function() {
         // JavaScript to be fired on the about us page
+
+        $(document).on("click", '.sidebar__item', function(){
+
+          var $data_value = $(this).data("block");
+
+          $('.sidebar__item').removeClass('sidebar__item--active');
+          $('.block__container').removeClass('block__container--active');
+
+          $(this).addClass('sidebar__item--active');
+          $('.block__container[data-block="' + $data_value + '"]').addClass('block__container--active');
+        });
+
+        // var $default_data_value = "";
+
+        // $(".sidebar__item").hover(function(){
+        //     var $data_value = $(this).data("block");
+        //     $default_data_value = $('.sidebar__item--active').data("block");
+
+        //     $('.sidebar__item').removeClass('sidebar__item--active');
+        //     $('.block__container').removeClass('block__container--active');
+
+        //     $(this).addClass('sidebar__item--active');
+        //     $('.block__container[data-block="' + $data_value + '"]').addClass('block__container--active');
+
+        //     }, function(){
+
+        //     $('.sidebar__item').removeClass('sidebar__item--active');
+        //     $('.block__container').removeClass('block__container--active');
+
+        //     $('.sidebar__item[data-block="' + $default_data_value + '"]').addClass('sidebar__item--active');
+        //     $('.block__container[data-block="' + $default_data_value + '"]').addClass('block__container--active');
+        // });
       }
     }
   };

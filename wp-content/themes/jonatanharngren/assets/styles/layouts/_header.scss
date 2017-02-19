@@ -1,5 +1,5 @@
 .home {
-	header {
+	header, footer {
 		display: none;
 	}
 }
@@ -7,20 +7,47 @@
 .header {
 	background-color: $black;
 
-	.container {
+	&__container {
+		@extend .container;
 		position: relative;
 		min-height: 60px;
 	}
 
-	&__logo {
-		position: absolute;
-		top: 50%;
+	&__logo-wrapper {
+		position: fixed;
+		top: 15px;
 		left: 50%;
-		transform: translate(-50%, -50%);
+		transform: translateX(-50%);
+		width: 213px;
+		height: 43px;
+		z-index: 1000;
+	}
 
-		img {
-			height: 43px;
-			width: 213px;
+	&__close-logo {
+		position: absolute;
+		top: -5px;
+		right: -20px;
+		height: 15px;
+		width: 15px;
+		cursor: pointer;
+
+		&:before, &:after {
+			content: "";
+		    position: absolute;
+		    top: 7px;
+		    left: 0;
+			width: 15px;
+		    height: 2px;
+		    background: $white;
+		}
+
+		&:before {
+			transform: rotate(45deg);
+    		transform-origin: center center;
+		}
+
+		&:after {
+			transform: rotate(-45deg);
 		}
 	}
 
