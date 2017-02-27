@@ -26,3 +26,12 @@ img {
 	height: auto;
 	width: 100%;
 }
+
+::selection {
+  background: #d2c729; /* WebKit/Blink Browsers */
+  color: $black;
+}
+::-moz-selection {
+  background: #d2c729; /* Gecko Browsers */
+  color: $black;
+}

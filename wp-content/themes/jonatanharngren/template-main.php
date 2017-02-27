@@ -3,33 +3,29 @@
  * Template Name: Main
  **/
 ?>
-
+<?php 
+global $iteration; 
+$iteration = 1;
+?>
 <?php while (have_posts()) : the_post(); ?>
 
-<?php $blocks = get_field('block'); ?>
-
 <div class="block__wrapper">
-	<?php 
-	foreach($blocks as $key => $block) : 
-		$key++; ?>
-		<div class="block__container<?= ( $key == 1 ) ? ' block__container--active' : ''; ?>" data-block="<?= $key; ?>">
-		<?php foreach($block['content'] as $block) : 
-			$style = "";
-			if( $block['background-image'] ) : 
-				$style = 'background-image: url(' . wp_get_attachment_image_src( $block['background-image'], 'large' )[0] . ');';
-			elseif( $block['background-color'] ) :
-				$style .= 'background-color:' . $block['background-color'] . ';';
-			endif; 
+	<?php while ( have_rows('block') ) : the_row(); ?>
+		<div class="block__container<?= ( $iteration == 1 ) ? ' block__container--active' : ''; ?>" data-block="<?= $iteration; ?>">
+			<?php 
+				if(get_sub_field('content')) : while(has_sub_field("content")) : 
 
+					get_template_part('templates/sections/section', get_row_layout());
+		
+				endwhile; endif;
+
+				$iteration++;
 			?>
-
-			<section class="block" style="<?= $style; ?>">
-				<h1><?= $key; ?></h1>
-			</section>
-		<?php endforeach; ?>
 		</div>
-	<?php endforeach; ?>
+	<?php endwhile; ?>
 </div>
+
+<?php $blocks = get_field('block'); ?>
 
 <div class="sidebar">
 	<ul class="sidebar__wrapper">

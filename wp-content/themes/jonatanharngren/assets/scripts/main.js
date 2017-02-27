@@ -23,7 +23,7 @@
         function fadeOutLogo( element, logo ) {
           $(document).on("click", element, function(){
             var $content = $(element).add(logo);
-            $content.animate({opacity: "0"}, 300);
+            $content.css("opacity", "0");
           });
         }
 
