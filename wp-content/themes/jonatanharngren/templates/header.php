@@ -5,13 +5,11 @@
   ));
 ?>
 <header class="header">
-  <div class="header__container">
-  	<div class="header__logo-wrapper">
-  		<div class="header__close-logo"></div>
-	    <a href="<?= get_permalink( $pages[0]->ID ) ?>" class="header__logo">
-	    	<img src="<?=get_template_directory_uri()?>/dist/images/logomenupage.png">
-	    </a>
-    </div>
-    <div class="header__name"><?php bloginfo('name'); ?></div>
+	<div class="header__logo-wrapper">
+		<div class="header__close-logo"></div>
+    <a href="<?= get_permalink( $pages[0]->ID ) ?>" class="header__logo">
+    	<img src="<?=get_template_directory_uri()?>/dist/images/logomenupage.png">
+    </a>
   </div>
+  <div class="header__name"><?php bloginfo('name'); ?></div>
 </header>

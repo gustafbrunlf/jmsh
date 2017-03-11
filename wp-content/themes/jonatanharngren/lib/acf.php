@@ -54,6 +54,14 @@ if(function_exists("register_field_group"))
 										'default_value' => '',
 									),
 									array (
+										'key' => 'field_58bf19550babb',
+										'label' => 'Textfärg',
+										'name' => 'text-color',
+										'type' => 'color_picker',
+										'column_width' => '',
+										'default_value' => '',
+									),
+									array (
 										'key' => 'field_58b2b4e4c7039',
 										'label' => 'Sidinfo',
 										'name' => 'siteinfo',
@@ -188,3 +196,4 @@ if(function_exists("register_field_group"))
 		'menu_order' => 0,
 	));
 }
+

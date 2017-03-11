@@ -5,6 +5,9 @@
 	if( $background_color = get_sub_field('background-color') ) :
 		$style .= 'background-color:' . $background_color . ';';
 	endif;
+	if( $text_color = get_sub_field('text-color') ) :
+		$style .= 'color:' . $text_color . ';';
+	endif;
 ?>
 <section class="block" style="<?= $style; ?>">
 	<div class="content__container">
