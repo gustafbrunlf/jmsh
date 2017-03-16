@@ -29,6 +29,22 @@
 
         fadeOutLogo('.start__close-logo', '.start__logo');
         fadeOutLogo('.header__close-logo', '.header__logo');
+
+        $(document).on("click", '.about-block__close', function(){
+          $('.about-block__image img').css("opacity", "0");
+        });
+
+        $(document).on("click", 'a', function(event){
+          var attribute = $(this).attr('href');
+          if( attribute === '#' ) {
+            event.preventDefault();
+            $('.popup').addClass('popup__open');
+          }
+        });
+
+        $(document).on("click", '.popup__close', function(event){
+            $('.popup').removeClass('popup__open');
+        });
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired

@@ -195,5 +195,144 @@ if(function_exists("register_field_group"))
 		),
 		'menu_order' => 0,
 	));
+	register_field_group(array (
+		'id' => 'acf_options',
+		'title' => 'Options',
+		'fields' => array (
+			array (
+				'key' => 'field_58cae81676049',
+				'label' => 'Bakgrundsfärg',
+				'name' => 'background-color',
+				'type' => 'color_picker',
+				'default_value' => '',
+			),
+			array (
+				'key' => 'field_58cae8237604a',
+				'label' => 'Textfärg',
+				'name' => 'text-color',
+				'type' => 'color_picker',
+				'default_value' => '',
+			),
+			array (
+				'key' => 'field_58cae70728d52',
+				'label' => 'Titel',
+				'name' => 'title',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_58caec696ddb4',
+				'label' => 'E-mail adresser',
+				'name' => 'emails',
+				'type' => 'repeater',
+				'sub_fields' => array (
+					array (
+						'key' => 'field_58caec836ddb5',
+						'label' => 'link',
+						'name' => 'link',
+						'type' => 'text',
+						'column_width' => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'formatting' => 'html',
+						'maxlength' => '',
+					),
+				),
+				'row_min' => '',
+				'row_limit' => '',
+				'layout' => 'table',
+				'button_label' => 'Add Row',
+			),
+			array (
+				'key' => 'field_58cae6b9152e1',
+				'label' => 'Text',
+				'name' => 'text',
+				'type' => 'wysiwyg',
+				'default_value' => '',
+				'toolbar' => 'full',
+				'media_upload' => 'yes',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'options_page',
+					'operator' => '==',
+					'value' => 'acf-options',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_page',
+		'title' => 'Page',
+		'fields' => array (
+			array (
+				'key' => 'field_58cadcac18c58',
+				'label' => 'Bakgrundbild',
+				'name' => 'background-image',
+				'type' => 'image',
+				'save_format' => 'id',
+				'preview_size' => 'thumbnail',
+				'library' => 'all',
+			),
+			array (
+				'key' => 'field_58caf95bc483d',
+				'label' => 'Bakgrundsfärg',
+				'name' => 'background-color',
+				'type' => 'color_picker',
+				'default_value' => '',
+			),
+			array (
+				'key' => 'field_58cae250ddb9e',
+				'label' => 'Textfärg',
+				'name' => 'text-color',
+				'type' => 'color_picker',
+				'default_value' => '',
+			),
+			array (
+				'key' => 'field_58cadfb5bbb48',
+				'label' => 'Profilbild',
+				'name' => 'profile-image',
+				'type' => 'image',
+				'save_format' => 'id',
+				'preview_size' => 'thumbnail',
+				'library' => 'all',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'page_template',
+					'operator' => '==',
+					'value' => 'default',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
 }
-
