@@ -12,18 +12,19 @@
 
 	&__close-logo {
 		position: absolute;
-		top: -20px;
-		right: -20px;
-		height: 20px;
-		width: 20px;
+		top: -25px;
+    	right: -30px;
+    	height: 35px;
+    	width: 35px;
+    	padding: 10px;
 		cursor: pointer;
 
 		&:before, &:after {
 			content: "";
 		    position: absolute;
-		    top: 9px;
-		    left: 0;
-			width: 20px;
+		    top: 17px;
+    		left: 10px;
+			width: 15px;
 		    height: 1px;
 		    background: $black;
 		}
@@ -106,10 +107,18 @@
 
 		&:first-child {
 			padding-right: 30px;
+
+			@media (max-width: $xs-screen) {
+				padding-right: 15px;
+			}
 		}
 
 		&:last-child {
 			padding-left: 30px;
+
+			@media (max-width: $xs-screen) {
+				padding-left: 15px;
+			}
 		}
 	}
 
@@ -118,10 +127,15 @@
 
 		&--padding {
 			padding: 50px 50px 50px 0;
+
+			@media (max-width: $xs-screen) {
+				padding: 0;
+			}
 		}
 
 		p {
 			margin-top: 5px;
+			font-size: 0.9rem;
 		}
 	}
 }
@@ -156,28 +170,33 @@
 
 		padding-right: 60px;
 		max-width: 100%;
+
+		p {
+			font-size: 0.9rem;
+		}
 	}
 
 	&__image {
 		@extend .col-md-5;
 	
-		padding: 30px 20px;
+		padding: 20px 15px;
 		background-color: $black;
 	}
 
 	&__close {
 		position: absolute;
-		top: 10px;
-		right: 7px;
-		height: 12px;
-		width: 12px;
+		top: -6px;
+	    right: -6px;
+	    height: 30px;
+	    width: 30px;
+	    padding: 10px;
 		cursor: pointer;
 
 		&:before, &:after {
 			content: "";
 		    position: absolute;
-		    top: 5px;
-		    left: 0;
+		    top: 14px;
+    		left: 10px;
 			width: 12px;
 		    height: 1px;
 		    background: $white;
@@ -211,7 +230,7 @@
     // transition: all 0.3s;
 
     h4 {
-    	font-size: 1rem;
+    	font-size: 0.8rem;
     	font-weight: normal;
     	margin-bottom: 30px;
     }
@@ -224,10 +243,13 @@
     &__email {
     	margin-bottom: 30px;
     	max-width: 280px;
+    	font-size: 0.8rem;
 
     	a {
     		display: block;
     		text-transform: uppercase;
+    		border-bottom: 1px solid $black;
+    		margin-bottom: 10px;
     	}
 
     	span {
@@ -241,8 +263,9 @@
 
     &__wrapper {
 	    position: absolute;
-	    max-width: 500px;
+	    max-width: 400px;
 	    padding: 10px 30px;
+	    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
 	    margin: auto;
 	    transform: translate(0, -50%);
 	    top: 50%;
@@ -262,8 +285,8 @@
 		&:before, &:after {
 			content: "";
 		    position: absolute;
-		    top: 5px;
-		    left: 0;
+		    top: 17px;
+		    left: 10px;
 			width: 15px;
 		    height: 1px;
 		    background: $black;
@@ -278,4 +301,18 @@
 			transform: rotate(-45deg);
 		}
     }
+}
+
+#sound-button {
+	position: fixed;
+	right: 0;
+	bottom: 50px;
+	padding: 5px 15px;
+	text-transform: uppercase;
+	color: $white;
+	cursor: pointer;
+
+	@media (max-width: 1024px) {
+		display: none;
+	}
 }

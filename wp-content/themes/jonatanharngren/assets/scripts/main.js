@@ -45,6 +45,15 @@
         $(document).on("click", '.popup__close', function(event){
             $('.popup').removeClass('popup__open');
         });
+
+        $(document).on("click", '#sound-button', function(event){
+          var myAudio = document.getElementById("sound");
+          if (myAudio.paused) {
+            myAudio.play();
+          } else {
+            myAudio.pause();
+          }
+        });
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired

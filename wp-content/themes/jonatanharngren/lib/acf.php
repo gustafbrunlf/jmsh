@@ -200,6 +200,12 @@ if(function_exists("register_field_group"))
 		'title' => 'Options',
 		'fields' => array (
 			array (
+				'key' => 'field_58ced719bed64',
+				'label' => 'Popup',
+				'name' => '',
+				'type' => 'tab',
+			),
+			array (
 				'key' => 'field_58cae81676049',
 				'label' => 'Bakgrundsfärg',
 				'name' => 'background-color',
@@ -258,6 +264,20 @@ if(function_exists("register_field_group"))
 				'default_value' => '',
 				'toolbar' => 'full',
 				'media_upload' => 'yes',
+			),
+			array (
+				'key' => 'field_58ced727bed65',
+				'label' => 'Ljud',
+				'name' => '',
+				'type' => 'tab',
+			),
+			array (
+				'key' => 'field_58ced732bed66',
+				'label' => 'sound',
+				'name' => 'sound',
+				'type' => 'file',
+				'save_format' => 'url',
+				'library' => 'all',
 			),
 		),
 		'location' => array (

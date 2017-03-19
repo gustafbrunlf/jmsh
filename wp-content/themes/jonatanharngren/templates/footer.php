@@ -11,11 +11,12 @@
 			if ( $emails = get_field('emails', 'option') ) : 
 				foreach ($emails as $email) :
 					echo '<a style="color: ' . get_field('text-color', 'option') . ';" href="mailto:' . $email['link'] . '">' . $email['link'] . '</a>';
-					echo '<span style="color: ' . get_field('text-color', 'option') . ';">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . </span>';
 				endforeach;
 			endif; 
 		?>
 		</div>
-		<?php the_field('text', 'option'); ?>
+		<div class="popup__text">
+			<?php the_field('text', 'option'); ?>
+		</div>
 	</div>
 </div>

@@ -2,6 +2,10 @@
 	background-color: $black;
 	padding: 0 60px;
 
+	@media (max-width: $xs-screen) {
+		padding: 0 15px;
+	}
+
 	.menu {
 		margin-bottom: 0;
 		list-style-type: none;

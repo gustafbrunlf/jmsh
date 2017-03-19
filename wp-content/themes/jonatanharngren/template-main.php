@@ -36,4 +36,12 @@ $iteration = 1;
 	</ul>
 </div>
 
+<?php if ( $sound = get_field('sound', 'option') ) : ?>
+	<div id="sound-button">Sound</div>
+
+	<audio id="sound" loop autoplay>
+		 <source src="<?= $sound; ?>" type="audio/mpeg">
+	</audio>
+<?php endif; ?>
+
 <?php endwhile; ?>
