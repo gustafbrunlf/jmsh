@@ -13,6 +13,14 @@
 					echo '<a style="color: ' . get_field('text-color', 'option') . ';" href="mailto:' . $email['link'] . '">' . $email['link'] . '</a>';
 				endforeach;
 			endif; 
+
+			if( $instagram = get_field('instagram', 'option') ) : 
+				echo '<a href="' . $instagram . '" target="_blank">Instagram</a>';
+			endif;
+
+			if( $facebook = get_field('facebook', 'option') ) : 
+				echo '<a href="' . $facebook . '" target="_blank">Facebook</a>';
+			endif;
 		?>
 		</div>
 		<div class="popup__text">

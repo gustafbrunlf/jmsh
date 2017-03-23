@@ -1,4 +1,14 @@
 .start {
+	&__container {
+		position: relative;
+		min-height: 100vh;
+		width: 100%;
+		text-align: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+	}
+
 	&__logo-wrapper {
 		position: absolute;
 		top: 0;
@@ -55,8 +65,8 @@
 
 	&__item {
 		padding: 5px 20px;
-		color: $white;
-		font-size: 38px;
+		color: rgb(249, 249, 249);
+		font-size: 45px;
 		line-height: 1;
 		cursor: pointer;
 
@@ -66,6 +76,10 @@
 
 		&--active {
 			text-decoration: underline;
+		}
+
+		@media (max-width: $xs-screen) {
+			font-size: 30px;
 		}
 	}
 }
@@ -155,6 +169,12 @@
 	right: 0;
 	transform: translateY(-50%);
 
+	@media (max-width: 768px) {
+		position: static;
+		transform: none;
+		padding: 30px;
+	}
+
 	&__row {
 		@extend .row;
 	}
@@ -171,6 +191,11 @@
 		padding-right: 60px;
 		max-width: 100%;
 
+		@media (max-width: $xs-screen) {
+			padding-right: 15px;
+			float: left;
+		}
+
 		p {
 			font-size: 0.9rem;
 		}
@@ -178,19 +203,26 @@
 
 	&__image {
 		@extend .col-md-5;
-	
-		padding: 20px 15px;
-		background-color: $black;
+		float: right;
+
+		@media (max-width: $xs-screen) {
+			float: left;
+			margin-bottom: 20px;
+		}
 	}
 
 	&__close {
 		position: absolute;
-		top: -6px;
-	    right: -6px;
+		top: -25px;
+    	right: -5px;
 	    height: 30px;
 	    width: 30px;
 	    padding: 10px;
 		cursor: pointer;
+
+		@media (max-width: 768px) {
+			display: none;
+		}
 
 		&:before, &:after {
 			content: "";
@@ -199,7 +231,7 @@
     		left: 10px;
 			width: 12px;
 		    height: 1px;
-		    background: $white;
+		    background: $black;
 		}
 
 		&:before {
@@ -265,7 +297,6 @@
 	    position: absolute;
 	    max-width: 400px;
 	    padding: 10px 30px;
-	    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
 	    margin: auto;
 	    transform: translate(0, -50%);
 	    top: 50%;
@@ -305,11 +336,11 @@
 
 #sound-button {
 	position: fixed;
-	right: 0;
-	bottom: 50px;
-	padding: 5px 15px;
+	left: 0;
+	bottom: 4px;
+	padding: 5px 7px;
 	text-transform: uppercase;
-	color: $white;
+	color: rgb(249, 249, 249);
 	cursor: pointer;
 
 	@media (max-width: 1024px) {

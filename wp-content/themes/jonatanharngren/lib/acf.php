@@ -279,6 +279,36 @@ if(function_exists("register_field_group"))
 				'save_format' => 'url',
 				'library' => 'all',
 			),
+			array (
+				'key' => 'field_58d418d13e449',
+				'label' => 'Sociala fasoner',
+				'name' => '',
+				'type' => 'tab',
+			),
+			array (
+				'key' => 'field_58d418ea3e44a',
+				'label' => 'Instagram',
+				'name' => 'instagram',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_58d418ff3e44b',
+				'label' => 'Facebook',
+				'name' => 'facebook',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
 		),
 		'location' => array (
 			array (
@@ -351,6 +381,56 @@ if(function_exists("register_field_group"))
 			'position' => 'normal',
 			'layout' => 'no_box',
 			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_start-page',
+		'title' => 'Start page',
+		'fields' => array (
+			array (
+				'key' => 'field_58d41a30b6102',
+				'label' => 'Logotyp',
+				'name' => 'logotyp',
+				'type' => 'image',
+				'save_format' => 'url',
+				'preview_size' => 'thumbnail',
+				'library' => 'all',
+			),
+			array (
+				'key' => 'field_58d409b9d931c',
+				'label' => 'Bakgrundsbild',
+				'name' => 'background-image',
+				'type' => 'image',
+				'save_format' => 'id',
+				'preview_size' => 'thumbnail',
+				'library' => 'all',
+			),
+			array (
+				'key' => 'field_58d409ccd931d',
+				'label' => 'Bakgrundsfärg',
+				'name' => 'background-color',
+				'type' => 'color_picker',
+				'default_value' => '',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'page_template',
+					'operator' => '==',
+					'value' => 'template-start.php',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+				0 => 'the_content',
 			),
 		),
 		'menu_order' => 0,

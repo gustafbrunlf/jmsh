@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Hind+Guntur");
+@import url('https://fonts.googleapis.com/css?family=Hind+Guntur:400,700');
 
 body {
   font-family: 'Hind Guntur', sans-serif;
@@ -34,11 +34,11 @@ img {
 }
 
 ::selection {
-  background: #d2c729; /* WebKit/Blink Browsers */
+  background: #eded50; /* WebKit/Blink Browsers */
   color: $black;
 }
 ::-moz-selection {
-  background: #d2c729; /* Gecko Browsers */
+  background: #eded50; /* Gecko Browsers */
   color: $black;
 }
 
