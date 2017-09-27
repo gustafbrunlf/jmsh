@@ -162,16 +162,19 @@
 	@extend .container;
 
 	max-width: 900px;
-
 	position: absolute;
 	top: 50%;
 	left: 0;
 	right: 0;
 	transform: translateY(-50%);
 
-	@media (max-width: 768px) {
+	@media (max-width: 1500px) {
 		position: static;
 		transform: none;
+		padding: 80px;
+	}
+
+	@media (max-width: 768px) {
 		padding: 30px;
 	}
 
