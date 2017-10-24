@@ -86,7 +86,7 @@
 
 .block {
 	position: relative;
-	min-height: 100vh;
+	min-height: calc(100vh - 104px);
 	width: 100%;
 	text-align: center;
 	background-repeat: no-repeat;
