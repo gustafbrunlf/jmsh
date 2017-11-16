@@ -4,6 +4,8 @@
  **/
 ?>
 
+<?php while (have_posts()) : the_post(); ?>
+
 <?php 
 	$style = "";
 	if( $background_image = get_field('background-image') ) : 
@@ -26,3 +28,5 @@
 		</a>
 	</div>
 </div>
+
+<?php endwhile; ?>

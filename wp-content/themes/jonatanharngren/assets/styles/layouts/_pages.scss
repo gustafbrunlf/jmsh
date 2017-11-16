@@ -350,3 +350,83 @@
 		display: none;
 	}
 }
+
+.form {
+	&-wrapper {
+		padding: 30px;
+	}
+
+	&-header, &-body {
+		float: left;
+		width: 100%;
+		padding: 20px 0;
+
+		.info {
+
+		}
+	}
+
+	&-title, &-data {
+		float: left;
+
+		img, input {
+			width: 100%;
+			height: auto;
+		}
+
+		&-image {
+			max-width: 150px;
+			float: left;
+		}
+
+		&-wrapper {
+			display: inline-block;
+			float: left;
+			padding-left: 10px;
+		}
+
+		&-info {
+			width: 40%;
+			min-height: 1px;
+		}
+		&-size {
+			width: 30%;
+
+			&-item {
+				display: block;
+			}
+		}
+		&-qty {
+			width: 10%;
+		}
+		&-price {
+			widows: 20%;
+		}
+	}
+
+	&-data {
+		&-wrapper {
+			position: relative;
+			min-height: 150px;
+
+			span {
+				position: absolute;
+				bottom: 0;
+			}
+		}
+	}
+
+	br {
+		display: none;
+	}
+
+	p {
+		margin: 0;
+	}
+}
+
+
+
+
+
+
