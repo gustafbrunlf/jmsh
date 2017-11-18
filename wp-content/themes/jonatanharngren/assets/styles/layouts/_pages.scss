@@ -354,15 +354,192 @@
 .form {
 	&-wrapper {
 		padding: 30px;
+		max-width: 1000px;
+		margin: auto;
 	}
 
-	&-header, &-body {
+	&-header, &-body, &-total, &-customer {
 		float: left;
 		width: 100%;
-		padding: 20px 0;
+	}
 
-		.info {
+	&-header {
+		border: 1px solid $black;
+	}
 
+	&-body {
+		border-right: 1px solid $black;
+		margin-bottom: 30px;
+	}
+
+	&-customer {
+		label, input {
+			margin-bottom: 5px;
+			height: 30px;
+		}
+		label {
+			float: left;
+			width: 10%;
+			border-bottom: 1px solid $black;
+			text-transform: uppercase;
+		}
+		input {
+			float: left;
+			width: 90%;
+			border-bottom: 1px solid $black;
+			border-top: 0;
+			border-left: 0;
+			border-right: 0;
+		}
+	}
+
+	&-total {
+		margin-bottom: 60px;
+
+		&-price {
+			width: 15%;
+		}
+
+		&-qty {
+			width: 8%;
+		}
+
+		&-title {
+			border-bottom: 1px solid $black;
+		}
+
+		input {
+			border: 0;
+			min-height: 30px;
+			line-height: 30px;
+			text-align: center;
+		}
+
+		.form-title {
+			text-transform: uppercase;
+			border: 1px solid $black;
+			border-right: 0;
+			min-height: 23px;
+			padding: 0;
+
+			&-price {
+				border-right: 1px solid $black;
+			}
+
+			&-price, &-qty {
+				text-align: center;
+			}
+
+			&-size {
+				padding: 0 5px;
+			}
+		}
+	}
+
+	&-title {
+		padding: 0 5px;
+		text-transform: uppercase;
+		font-size: 14px;
+
+		&-info,&-size, &-qty {
+			border-right: 1px solid $black;
+		}
+		&-price, &-qty {
+			text-align: center;
+		}
+		&-info {
+			min-height: 21px;
+		}
+	}
+
+	&-data {
+		&-wrapper {
+			position: relative;
+			display: inline-block;
+			float: left;
+			margin-left: 10px;
+			border-bottom: 1px solid $black;
+			min-height: 110px;
+			width: calc(100% - 120px);
+
+			span {
+				position: absolute;
+				bottom: 0;
+			}
+		}
+		&-image {
+			max-width: 110px;
+			float: left;
+		}
+		&-info, &-qty, &-price, &-size {
+			min-height: 120px;
+		}
+		&-info {
+			padding-top: 10px;
+			border-right: 1px solid $black;
+
+			h4 {
+				font-size: 15px;
+				text-transform: uppercase;
+			}
+
+			p, span {
+				font-size: 13px;
+			}
+		}
+		&-size {
+			&-item {
+				border: 1px solid $black;
+				border-top: 0;
+				border-left: 0;
+				min-height: 40px;
+				padding: 5px;
+
+				span {
+					display: block;
+					padding: 0 5px;
+					border: 1px solid $black;
+					max-width: 25px;
+    				text-align: center;
+    				line-height: 25px;
+				}
+			}
+		}
+
+		&-qty {
+			&-input {
+				min-height: 40px;
+				border: 1px solid $black;
+				border-top: 0;
+				border-left: 0;
+				padding: 5px 12px;
+				text-align: center;
+				font-size: 14px;
+
+				input {
+					text-align: center;
+					border: 0;
+					background-color: $purple;
+					max-width: 40px;
+				}
+			}
+		}
+
+		&-price {
+			&-container {
+				min-height: 40px;
+				border-bottom: 1px solid $black;
+				padding: 5px;
+
+				span {
+					display: block;
+					min-height: 26px;
+					background-color: $purple;
+					max-width: 90px;
+					margin: auto;
+					text-align: center;
+				}
+			}
 		}
 	}
 
@@ -374,45 +551,21 @@
 			height: auto;
 		}
 
-		&-image {
-			max-width: 150px;
-			float: left;
-		}
-
-		&-wrapper {
-			display: inline-block;
-			float: left;
-			padding-left: 10px;
-		}
-
 		&-info {
-			width: 40%;
-			min-height: 1px;
+			width: 57%;
 		}
 		&-size {
-			width: 30%;
+			width: 20%;
 
 			&-item {
 				display: block;
 			}
 		}
 		&-qty {
-			width: 10%;
+			width: 8%;
 		}
 		&-price {
-			widows: 20%;
-		}
-	}
-
-	&-data {
-		&-wrapper {
-			position: relative;
-			min-height: 150px;
-
-			span {
-				position: absolute;
-				bottom: 0;
-			}
+			width: 15%;
 		}
 	}
 
