@@ -106,6 +106,21 @@
         //     $('.block__container[data-block="' + $default_data_value + '"]').addClass('block__container--active');
         // });
       }
+    },
+    'form': {
+      init: function() {
+        $('.form-data-qty-input input').on('input', function() { 
+            var value = $(this).val(); // get the current value of the input field.
+            var price = $(this).closest('.form-data-qty').siblings('.form-data-info').find('span').text();
+            price = price.split(" ");
+
+            var price_col = $(this).closest('.form-data-qty').siblings('.form-data-price').children();
+
+            var number = $(this).closest('.form-data-qty-input').data('input');
+
+            price_col.eq(number).html('<span>' + (value * price[0]) + '</span>');
+        });
+      }
     }
   };
 
