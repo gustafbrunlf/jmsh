@@ -118,7 +118,19 @@
 
             var number = $(this).closest('.form-data-qty-input').data('input');
 
-            price_col.eq(number).html('<span>' + (value * price[0]) + '</span>');
+            price_col.eq(number).find('input').val( (value * price[0]) );
+
+            var total_qty = 0;
+            $('.form-data-qty-input input').each(function( index ) {
+              total_qty += parseInt($(this).val(), 10);
+            });
+            $('.form-total-qty-sum input[name="number-qty"]').val(total_qty);
+
+            var total_price = 0;
+            $('.form-data-price-container input').each(function( index ) {
+              total_price += parseInt($(this).val(), 10);
+            });
+            $('.form-total-price-sum input[name="number-price"]').val(total_price);
         });
       }
     }

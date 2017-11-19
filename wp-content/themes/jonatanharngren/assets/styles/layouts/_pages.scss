@@ -531,13 +531,14 @@
 				border-bottom: 1px solid $black;
 				padding: 5px;
 
-				span {
+				input {
 					display: block;
 					min-height: 26px;
 					background-color: $purple;
 					max-width: 90px;
 					margin: auto;
 					text-align: center;
+					border: 0;
 				}
 			}
 		}
