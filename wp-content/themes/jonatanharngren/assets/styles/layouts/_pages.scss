@@ -356,6 +356,14 @@
 		padding: 30px;
 		max-width: 1000px;
 		margin: auto;
+
+		br {
+			display: none;
+		}
+
+		p {
+			margin: 0;
+		}
 	}
 
 	&-header, &-body, &-total, &-customer, &-customer-info {
@@ -633,16 +641,20 @@
 			}
 		}
 	}
-
-	br {
-		display: none;
-	}
-
-	p {
-		margin: 0;
-	}
 }
 
+.wpcf7-response-output {
+	float: left;
+	width: 100%;
+	border: 0 !important;
+	text-align: center;
+	background: #eded50;
+}
+
+.wpcf7-not-valid-tip {
+	float: left;
+	width: 100%;
+}
 
 
 

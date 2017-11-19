@@ -107,7 +107,7 @@
         // });
       }
     },
-    'form': {
+    'order': {
       init: function() {
         $('.form-data-qty-input input').on('input', function() { 
             var value = $(this).val(); // get the current value of the input field.
