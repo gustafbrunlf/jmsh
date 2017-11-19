@@ -39,11 +39,22 @@
           if( attribute === '#' ) {
             event.preventDefault();
             $('.popup').addClass('popup__open');
+            $('body').addClass('no-scroll');
+          }
+          if( attribute === '#form'  ) {
+            $('.form__popup').addClass('form__popup--open');
+            $('body').addClass('no-scroll');
           }
         });
 
         $(document).on("click", '.popup__close', function(event){
             $('.popup').removeClass('popup__open');
+            $('body').removeClass('no-scroll');
+        });
+
+        $(document).on("click", '.form__close', function(event){
+            $('.form__popup').removeClass('form__popup--open');
+            $('body').removeClass('no-scroll');
         });
 
         $(document).on("click", '#sound-button', function(event){
@@ -53,6 +64,30 @@
           } else {
             myAudio.pause();
           }
+        });
+
+        $('.form-data-qty-input input').on('input', function() { 
+            var value = $(this).val(); // get the current value of the input field.
+            var price = $(this).closest('.form-data-qty').siblings('.form-data-info').find('span').text();
+            price = price.split(" ");
+
+            var price_col = $(this).closest('.form-data-qty').siblings('.form-data-price').children();
+
+            var number = $(this).closest('.form-data-qty-input').data('input');
+
+            price_col.eq(number).find('input').val( (value * price[0]) );
+
+            var total_qty = 0;
+            $('.form-data-qty-input input').each(function( index ) {
+              total_qty += parseInt($(this).val(), 10);
+            });
+            $('.form-total-qty-sum input[name="number-qty"]').val(total_qty);
+
+            var total_price = 0;
+            $('.form-data-price-container input').each(function( index ) {
+              total_price += parseInt($(this).val(), 10);
+            });
+            $('.form-total-price-sum input[name="number-price"]').val(total_price);
         });
       },
       finalize: function() {
@@ -105,33 +140,6 @@
         //     $('.sidebar__item[data-block="' + $default_data_value + '"]').addClass('sidebar__item--active');
         //     $('.block__container[data-block="' + $default_data_value + '"]').addClass('block__container--active');
         // });
-      }
-    },
-    'order': {
-      init: function() {
-        $('.form-data-qty-input input').on('input', function() { 
-            var value = $(this).val(); // get the current value of the input field.
-            var price = $(this).closest('.form-data-qty').siblings('.form-data-info').find('span').text();
-            price = price.split(" ");
-
-            var price_col = $(this).closest('.form-data-qty').siblings('.form-data-price').children();
-
-            var number = $(this).closest('.form-data-qty-input').data('input');
-
-            price_col.eq(number).find('input').val( (value * price[0]) );
-
-            var total_qty = 0;
-            $('.form-data-qty-input input').each(function( index ) {
-              total_qty += parseInt($(this).val(), 10);
-            });
-            $('.form-total-qty-sum input[name="number-qty"]').val(total_qty);
-
-            var total_price = 0;
-            $('.form-data-price-container input').each(function( index ) {
-              total_price += parseInt($(this).val(), 10);
-            });
-            $('.form-total-price-sum input[name="number-price"]').val(total_price);
-        });
       }
     }
   };

@@ -36,3 +36,15 @@
 		</div>
 	</div>
 </div>
+
+<div class="form__popup">
+	<div class="form__wrapper">
+		<div class="form__header">
+    		<img src="">
+    		<p>WORKSHOP, GOTHENBURG, SWEDEN</p>
+    		<p>Note: This is not a purchase, but an order request, which is received and processed. When everything is created by hand, lead times can vary, answers can take up to two business days.</p>
+		</div>
+		<div class="form__close"></div>
+		<?= do_shortcode('[contact-form-7 id="39" title="Customer form"]'); ?>
+	</div>
+</div>
