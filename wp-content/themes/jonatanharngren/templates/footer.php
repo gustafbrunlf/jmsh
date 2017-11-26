@@ -18,16 +18,16 @@
 		<?php 
 			if ( $emails = get_field('emails', 'option') ) : 
 				foreach ($emails as $email) :
-					echo '<a style="color: ' . get_field('text-color', 'option') . ';" href="mailto:' . $email['link'] . '">' . $email['link'] . '</a>';
+					echo '<a href="mailto:' . $email['link'] . '" style="color: ' . get_field('text-color', 'option') . ';">' . $email['link'] . '</a>';
 				endforeach;
 			endif; 
 
 			if( $instagram = get_field('instagram', 'option') ) : 
-				echo '<a href="' . $instagram . '" target="_blank">Instagram</a>';
+				echo '<a href="' . $instagram . '" target="_blank" style="color: ' . get_field('text-color', 'option') . ';">Instagram</a>';
 			endif;
 
 			if( $facebook = get_field('facebook', 'option') ) : 
-				echo '<a href="' . $facebook . '" target="_blank">Facebook</a>';
+				echo '<a href="' . $facebook . '" target="_blank" style="color: ' . get_field('text-color', 'option') . ';">Facebook</a>';
 			endif;
 		?>
 		</div>
@@ -40,9 +40,7 @@
 <div class="form__popup">
 	<div class="form__wrapper">
 		<div class="form__header">
-    		<img src="">
-    		<p>WORKSHOP, GOTHENBURG, SWEDEN</p>
-    		<p>Note: This is not a purchase, but an order request, which is received and processed. When everything is created by hand, lead times can vary, answers can take up to two business days.</p>
+    		<img src="<?=get_template_directory_uri()?>/dist/images/logoform.svg">
 		</div>
 		<div class="form__close"></div>
 		<?= do_shortcode('[contact-form-7 id="39" title="Customer form"]'); ?>

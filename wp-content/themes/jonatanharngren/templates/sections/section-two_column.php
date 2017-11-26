@@ -25,7 +25,15 @@
 					<?php 
 						foreach ($column_one as $value) {
 							echo '<div class="content__wrapper' . (( $value['padding'] ) ? ' content__wrapper--padding' : '') . '">';
-							echo '<img src="' . wp_get_attachment_image_src($value['image'], 'large')[0] . '">';
+							if( $value['slider'] && $value['use_slider'] ) {
+								echo '<div class="slider-wrapper">';
+								foreach ($value['slider'] as $slide) {
+									echo '<div class="slide-item"><img src="' . wp_get_attachment_image_src($slide['slider-image'], 'large')[0] . '"></div>';
+								}
+								echo '</div>';
+							} else {
+								echo '<img src="' . wp_get_attachment_image_src($value['image'], 'large')[0] . '">';
+							}
 							echo '<p>' . $value['bylinetext'] . '</p>';
 							echo '</div>';
 						}
@@ -38,7 +46,15 @@
 					<?php 
 						foreach ($column_two as $value) {
 							echo '<div class="content__wrapper' .  (( $value['padding'] ) ? ' content__wrapper--padding' : '') . '">';
-								echo '<img src="' . wp_get_attachment_image_src($value['image'], 'large')[0] . '">';
+								if( $value['slider'] && $value['use_slider'] ) {
+									echo '<div class="slider-wrapper">';
+									foreach ($value['slider'] as $slide) {
+										echo '<div class="slide-item"><img src="' . wp_get_attachment_image_src($slide['slider-image'], 'large')[0] . '"></div>';
+									}
+									echo '</div>';
+								} else {
+									echo '<img src="' . wp_get_attachment_image_src($value['image'], 'large')[0] . '">';
+								}
 								echo '<p>' . $value['bylinetext'] . '</p>';
 							echo '</div>';
 						}
