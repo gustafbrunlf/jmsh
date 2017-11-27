@@ -39,22 +39,18 @@
           if( attribute === '#' ) {
             event.preventDefault();
             $('.popup').addClass('popup__open');
-            $('body').addClass('no-scroll');
           }
           if( attribute === '#form'  ) {
             $('.form__popup').addClass('form__popup--open');
-            $('body').addClass('no-scroll');
           }
         });
 
         $(document).on("click", '.popup__close', function(event){
             $('.popup').removeClass('popup__open');
-            $('body').removeClass('no-scroll');
         });
 
         $(document).on("click", '.form__close', function(event){
             $('.form__popup').removeClass('form__popup--open');
-            $('body').removeClass('no-scroll');
         });
 
         $(document).on("click", '#sound-button', function(event){
