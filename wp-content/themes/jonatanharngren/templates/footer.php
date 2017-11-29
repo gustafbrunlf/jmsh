@@ -18,16 +18,16 @@
 		<?php 
 			if ( $emails = get_field('emails', 'option') ) : 
 				foreach ($emails as $email) :
-					echo '<a href="mailto:' . $email['link'] . '" style="color: ' . get_field('text-color', 'option') . ';">' . $email['link'] . '</a>';
+					echo '<a href="mailto:' . $email['link'] . '" style="color: ' . get_field('text-color', 'option') . ';border-bottom: 1px solid ' . get_field('text-color', 'option') . ';">' . $email['link'] . '</a>';
 				endforeach;
 			endif; 
 
 			if( $instagram = get_field('instagram', 'option') ) : 
-				echo '<a href="' . $instagram . '" target="_blank" style="color: ' . get_field('text-color', 'option') . ';">Instagram</a>';
+				echo '<a href="' . $instagram . '" target="_blank" style="color: ' . get_field('text-color', 'option') . ';border-bottom: 1px solid ' . get_field('text-color', 'option') . ';">Instagram</a>';
 			endif;
 
 			if( $facebook = get_field('facebook', 'option') ) : 
-				echo '<a href="' . $facebook . '" target="_blank" style="color: ' . get_field('text-color', 'option') . ';">Facebook</a>';
+				echo '<a href="' . $facebook . '" target="_blank" style="color: ' . get_field('text-color', 'option') . ';border-bottom: 1px solid ' . get_field('text-color', 'option') . ';">Facebook</a>';
 			endif;
 		?>
 		</div>
