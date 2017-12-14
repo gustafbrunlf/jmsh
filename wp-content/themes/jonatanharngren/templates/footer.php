@@ -1,8 +1,8 @@
-<?php if ( $sound = get_field('sound', 'option') ) : ?>
+<?php if ( get_field('sound', 'option') && !is_front_page() ) : ?>
 	<div id="sound-button">Sound</div>
 
 	<audio id="sound" loop autoplay>
-		 <source src="<?= $sound; ?>" type="audio/mpeg">
+		 <source src="<?= get_field('sound', 'option'); ?>" type="audio/mpeg">
 	</audio>
 <?php endif; ?>
 
