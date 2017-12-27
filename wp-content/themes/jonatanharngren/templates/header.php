@@ -11,5 +11,5 @@
     	<img src="<?=get_template_directory_uri()?>/dist/images/logomenupage.png">
     </a>
   </div>
-  <div class="header__name"><a href="<?= get_home_url(); ?>/main">JMSH</a></div>
+  <div class="header__name"><a href="<?= get_home_url(); ?>/main">J.H</a></div>
 </header>
