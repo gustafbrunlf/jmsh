@@ -48,22 +48,4 @@
 			transform: rotate(-45deg);
 		}
 	}
-
-	&__name {
-		float: right;
-		color: $white;
-		margin-top: 24px;
-
-		a {
-			color: $white;
-
-			&:hover {
-				text-decoration: none;
-			}
-		}
-		
-		@media (max-width: $xs-screen) {
-			display: none;
-		}
-	}
 }
