@@ -7,7 +7,7 @@
 
 <div class="retailer__wrapper">
 	<div class="retailer__header">
-		<img src="<?=get_template_directory_uri()?>/dist/images/logoform.svg">
+		<img src="">
 	</div>
 	<?php the_content(); ?>
 </div>

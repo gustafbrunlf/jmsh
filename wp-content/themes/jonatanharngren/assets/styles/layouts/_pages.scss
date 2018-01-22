@@ -107,11 +107,13 @@
 		left: 0;
 		right: 0;
 		transform: translate(0, -50%);
-		font-size: 32px;
+		font-size: 31px;
     	line-height: 1;
+    	padding: 0 90px;
 
 		@media (max-width: $xs-screen) {
 			font-size: 26px;
+			padding: 0 60px;
     	}
 	}
 }

@@ -33,3 +33,12 @@ function excerpt_more() {
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 
 add_image_size( 'full-size', 2000, 0);
+
+function empty_page_cache() {
+ if (function_exists('w3tc_pgcache_flush')) {
+  w3tc_pgcache_flush();
+ }
+}
+
+add_action( 'save_post', __NAMESPACE__ . '\\empty_page_cache' );
+add_action( 'deleted_post', __NAMESPACE__ . '\\empty_page_cache' );

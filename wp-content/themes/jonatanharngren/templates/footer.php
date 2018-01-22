@@ -1,4 +1,4 @@
-<?php if ( get_field('sound', 'option') && !is_front_page() ) : ?>
+<?php if ( get_field('sound', 'option') && is_page_template('template-main.php') ) : ?>
 	<div id="sound-button">Sound</div>
 
 	<audio id="sound" loop autoplay>
@@ -40,7 +40,7 @@
 <div class="form__popup">
 	<div class="form__wrapper">
 		<div class="form__header">
-    		<img src="<?=get_template_directory_uri()?>/dist/images/logoform.svg">
+    		<img src="">
 		</div>
 		<div class="form__close"></div>
 		<?= do_shortcode('[contact-form-7 id="39" title="Customer form"]'); ?>
