@@ -2,53 +2,14 @@
 @import url('https://fonts.googleapis.com/css?family=Maven+Pro');
 
 body {
-  font-family: 'Hind Guntur', sans-serif;
+    font-family: 'Hind Guntur', sans-serif;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: $black;
 }
 
 .main {
-	padding-left: 0;
-	padding-right: 0;
-}
-
-.page-template-template-start {
-	background-color: $white;
-}
-
-.page-template-template-main {
-	background-color: $black;
-}
-
-.page {
-	display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-}
-
-.wrap {
     flex: 1 0 auto;
     width: 100%;
-}
-
-img {
-	height: auto;
-	width: 100%;
-}
-
-::selection {
-  background: #eded50; /* WebKit/Blink Browsers */
-  color: $black;
-}
-::-moz-selection {
-  background: #eded50; /* Gecko Browsers */
-  color: $black;
-}
-
-a, input {
-  color: $black;
-
-  &:hover, &:focus, &:active {
-    color: $black;
-    text-decoration: none;
-    outline: 0;
-  }
 }

@@ -27,7 +27,6 @@
           });
         }
 
-        fadeOutLogo('.start__close-logo', '.start__logo');
         fadeOutLogo('.header__close-logo', '.header__logo');
 
         $(document).on("click", '.about-block__close', function(){
@@ -74,7 +73,7 @@
           return total;
         }
 
-        $('.form-data-qty-input input').on('input', function() { 
+        $('.form-data-qty-input input').on('input', function() {
             var value = $(this).val(); // get the current value of the input field.
             var price = $(this).closest('.form-data-qty').siblings('.form-data-info').find('span').text();
             price = price.split(" ");
@@ -111,16 +110,16 @@
       init: function() {
         // JavaScript to be fired on the about us page
 
-        $(document).on("click", '.sidebar__item', function(){
-
-          var $data_value = $(this).data("block");
-
-          $('.sidebar__item').removeClass('sidebar__item--active');
-          $('.block__container').removeClass('block__container--active');
-
-          $(this).addClass('sidebar__item--active');
-          $('.block__container[data-block="' + $data_value + '"]').addClass('block__container--active');
-        });
+        // $(document).on("click", '.sidebar__item', function(){
+        //
+        //   var $data_value = $(this).data("block");
+        //
+        //   $('.sidebar__item').removeClass('sidebar__item--active');
+        //   $('.block__container').removeClass('block__container--active');
+        //
+        //   $(this).addClass('sidebar__item--active');
+        //   $('.block__container[data-block="' + $data_value + '"]').addClass('block__container--active');
+        // });
 
         if( $('.slider-wrapper').length ) {
           $('.slider-wrapper').slick({

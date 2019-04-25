@@ -18,11 +18,9 @@ use Roots\Sage\Wrapper;
       do_action('get_header');
       get_template_part('templates/header');
     ?>
-    <div class="wrap" role="document">
-      <div class="content">
-          <?php include Wrapper\template_path(); ?>
-      </div><!-- /.content -->
-    </div><!-- /.wrap -->
+    <div class="main" role="main">
+        <?php include Wrapper\template_path(); ?>
+    </div><!-- /.main -->
     <?php
       do_action('get_footer');
       get_template_part('templates/footer');

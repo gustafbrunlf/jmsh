@@ -1,0 +1,37 @@
+.c-project {
+    &-header__content {
+        position: relative;
+    	min-height: calc(100vh - 104px);
+    	width: 100%;
+    	text-align: center;
+    	background-repeat: no-repeat;
+    	background-size: cover;
+    	background-position: center center;
+    }
+    &-header__title {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		right: 0;
+		transform: translate(0, -50%);
+		font-size: 31px;
+    	line-height: 1;
+    	padding: 0 90px;
+        margin: 0;
+
+		@media (max-width: $xs-screen) {
+			font-size: 26px;
+			padding: 0 60px;
+    	}
+	}
+    &__subheader {
+        font-size: 1rem;
+    }
+    &__image-wrapper {
+        padding-bottom: 20px;
+    }
+    &__image-title {
+        margin: 5px 0;
+        font-size: .9rem;
+    }
+}
