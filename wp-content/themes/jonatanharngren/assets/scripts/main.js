@@ -37,7 +37,7 @@
           var attribute = $(this).attr('href');
           if( attribute === '#' ) {
             event.preventDefault();
-            $('.popup').addClass('popup__open');
+            $('.popup:not(.popup--image)').addClass('popup__open');
           }
           if( attribute === '#form'  ) {
             $('.form__popup').addClass('form__popup--open');
@@ -90,6 +90,28 @@
             var total_price = totals('.form-data-price-container input');
             $('.form-total-price-sum input[name="number-price"]').val(total_price);
         });
+
+        $('<div/>', {
+            class: 'popup popup--image',
+            html: '<div class="popup__wrapper"></div>'
+        }).insertAfter('.footer');
+
+        $(document).on("click", '.c-project__image', function(event){
+            event.preventDefault();
+            var imageUrl = $(this).attr('href');
+            var popupWrapper = $('.popup--image .popup__wrapper');
+            popupWrapper.html('');
+            if(imageUrl) {
+                var fullImg = $('<img class="popup__image">'); //Equivalent: $(document.createElement('img'))
+                fullImg.attr('src', imageUrl);
+                fullImg.appendTo(popupWrapper);
+            }
+            $('.popup--image').addClass('popup__open');
+            $('<div/>', {
+                class: 'popup__close',
+                html: '<span class="t-visually-hidden">Close popup</span>'
+            }).appendTo(popupWrapper);
+        });
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
@@ -110,16 +132,16 @@
       init: function() {
         // JavaScript to be fired on the about us page
 
-        // $(document).on("click", '.sidebar__item', function(){
-        //
-        //   var $data_value = $(this).data("block");
-        //
-        //   $('.sidebar__item').removeClass('sidebar__item--active');
-        //   $('.block__container').removeClass('block__container--active');
-        //
-        //   $(this).addClass('sidebar__item--active');
-        //   $('.block__container[data-block="' + $data_value + '"]').addClass('block__container--active');
-        // });
+        $(document).on("click", '.sidebar__item', function(){
+
+          var $data_value = $(this).data("block");
+
+          $('.sidebar__item').removeClass('sidebar__item--active');
+          $('.block__container').removeClass('block__container--active');
+
+          $(this).addClass('sidebar__item--active');
+          $('.block__container[data-block="' + $data_value + '"]').addClass('block__container--active');
+        });
 
         if( $('.slider-wrapper').length ) {
           $('.slider-wrapper').slick({

@@ -13,16 +13,8 @@ endif;
         <?php get_template_part('templates/projects/project-header'); ?>
     </div>
 
-    <?php if(false): ?>
-    <div class="sidebar">
-    	<ul class="sidebar__wrapper">
-    	<?php foreach($blocks as $key => $block) : ?>
-    		<?php $key++; ?>
-    		<li data-block="<?= $key; ?>" class="sidebar__item<?= ( $key == 1 ) ? ' sidebar__item--active' : ''; ?>">0<?= $key; ?></li>
-    	<?php endforeach; ?>
-    	</ul>
-    </div>
-    <?php endif; ?>
+    <?php get_template_part('templates/sidebar'); ?>
+
     <div class="o-width-limiter">
         <h2 class="c-project__subheader"><?= get_the_title(); ?></h2>
         <?= the_content(); ?>
