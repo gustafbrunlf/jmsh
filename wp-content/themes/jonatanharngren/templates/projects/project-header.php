@@ -12,7 +12,14 @@
         $color = '#000';
 	endif;
 
-    $text = '<h1 class="c-project-header__title" style="color:' . $color . '">' . $title . '</h1>';
-
+    $text = '';
 ?>
-<div class="c-project-header__content" style="<?= $style; ?>"><?= $text; ?></div>
+<?php if(!get_field('full_width_layout')) : ?>
+<div class="o-width-limiter">
+<?php endif; ?>
+<div class="c-project-header__content" style="<?= $style; ?>">
+	<h1 class="c-project-header__title" style="color:<?= $color; ?>"><?= $title; ?></h1>
+</div>
+<?php if(!get_field('full_width_layout')) : ?>
+</div>
+<?php endif; ?>

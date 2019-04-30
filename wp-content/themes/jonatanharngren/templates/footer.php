@@ -1,5 +1,5 @@
-<?php if ( get_field('sound', 'option') && is_page_template('template-main.php') ) : ?>
-	<div id="sound-button">Sound</div>
+<?php if ( get_field('sound', 'option') && is_page_template('template-main.php') || is_page_template('template-new-start.php') ) : ?>
+	<div id="sound-button"<?= is_admin_bar_showing() ? 'class="new"' : ''; ?>><?= is_admin_bar_showing() ? 'Sound on/off' : 'Sound'; ?></div>
 
 	<audio id="sound" loop autoplay>
 		 <source src="<?= get_field('sound', 'option'); ?>" type="audio/mpeg">
@@ -36,7 +36,7 @@
 		</div>
 	</div>
 </div>
-
+<?php if(false): ?>
 <div class="form__popup">
 	<div class="form__wrapper">
 		<div class="form__header">
@@ -46,3 +46,4 @@
 		<?= do_shortcode('[contact-form-7 id="39" title="Customer form"]'); ?>
 	</div>
 </div>
+<?php endif; ?>

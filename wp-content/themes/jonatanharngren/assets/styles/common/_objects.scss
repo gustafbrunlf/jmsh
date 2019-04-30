@@ -1,9 +1,18 @@
 .o-width-limiter {
-    @extend .container;
+    // @extend .container;
     height: 100%;
     padding-top: 30px;
     padding-bottom: 30px;
     text-align: left;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @media (max-width: 1480px) {
+        max-width: 900px;
+    }
 }
 
 .o-grid {

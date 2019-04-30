@@ -4,6 +4,7 @@
 	transform: translate(0, -50%);
 	right: 0;
 	max-width: 150px;
+	z-index: 100;
 
 	&__wrapper {
 		list-style-type: none;
@@ -17,6 +18,10 @@
 		font-size: 50px;
 		line-height: 1;
 
+		a {
+			color: rgb(249, 249, 249);
+		}
+
 		&:hover {
 			text-decoration: underline;
 		}
@@ -27,6 +32,17 @@
 
 		@media (max-width: $xs-screen) {
 			font-size: 30px;
+		}
+	}
+	&--new {
+		.sidebar__item {
+			font-size: 30px;
+			opacity: 1;
+			transition: opacity 0.1s ease;
+			&:hover {
+				opacity: 0;
+				text-decoration: none;
+			}
 		}
 	}
 }

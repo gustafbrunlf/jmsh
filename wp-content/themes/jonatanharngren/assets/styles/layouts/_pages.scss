@@ -229,19 +229,3 @@
 		}
 	}
 }
-
-#sound-button {
-	position: fixed;
-	left: 0;
-	bottom: 4px;
-	padding: 10px 7px;
-	text-transform: uppercase;
-	color: rgb(249, 249, 249);
-	cursor: pointer;
-	font-size: 14px;
-	line-height: 1;
-
-	@media (max-width: 1024px) {
-		display: none;
-	}
-}
