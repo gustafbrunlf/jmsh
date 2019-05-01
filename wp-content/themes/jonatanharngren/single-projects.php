@@ -9,7 +9,7 @@ if( $text_color = get_field('text_color') ) :
 endif;
 ?>
 <div class="c-project" style="<?= $style; ?>">
-    <div class="c-project__header">
+    <div class="c-project__header"<?= get_field('fullwidth_background_color') ? 'style="background-color:' . get_field('fullwidth_background_color') .';"' : ''; ?>>
         <?php get_template_part('templates/projects/project-header'); ?>
     </div>
 
