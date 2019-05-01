@@ -6,7 +6,7 @@
 	</audio>
 <?php endif; ?>
 
-<footer class="footer">
+<footer class="footer<?= is_admin_bar_showing() ? ' new' : ''; ?>" role="contentinfo">
   	<?php wp_nav_menu(); ?>
 </footer>
 

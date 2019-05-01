@@ -4,7 +4,7 @@
       'meta_value' => 'template-main.php'
   ));
 ?>
-<header class="header<?= is_admin_bar_showing() ? ' header--new' : ''; ?>">
+<header class="header<?= is_admin_bar_showing() ? ' header--new' : ''; ?>" role="banner">
     <div class="header__logo-wrapper">
     	<div class="header__close-logo"></div>
         <a href="<?= get_permalink( $pages[0]->ID ) ?>" class="header__logo">
