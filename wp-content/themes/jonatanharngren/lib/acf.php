@@ -1072,6 +1072,8 @@ acf_add_local_field_group(array(
 						12 => '100%',
 						6 => '50%',
 						4 => '33%',
+						3 => '25%',
+						2 => '20%',
 					),
 					'default_value' => array(
 						0 => 12,

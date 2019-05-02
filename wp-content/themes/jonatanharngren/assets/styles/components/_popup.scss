@@ -86,10 +86,14 @@
     }
 }
 .popup--image {
+	overflow: scroll;
+
     &.popup__open {
         background: rgba(0,0,0,0.3);
     }
     .popup__wrapper {
+		position: absolute;
+		max-height: 90%;
         max-width: 90%;
         padding-left: 0;
         padding-right: 0;

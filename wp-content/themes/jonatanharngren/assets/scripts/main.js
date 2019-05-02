@@ -44,8 +44,10 @@
           }
         });
 
-        $(document).on("click", '.popup__close', function(event){
-            $('.popup').removeClass('popup__open');
+        $(document).on("click", '.popup__close, .popup', function(event){
+            if(!$(event.target).is('.popup__wrapper')) {
+                $('.popup').removeClass('popup__open');
+            }
         });
 
         $(document).on("click", '.form__close', function(event){
