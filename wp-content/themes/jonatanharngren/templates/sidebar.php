@@ -9,7 +9,7 @@
     $projects = get_posts( $args );
     if($projects) :
 ?>
-<div class="sidebar<?= is_admin_bar_showing() ? ' sidebar--new' : ''; ?>">
+<div class="sidebar<?= is_user_logged_in() ? ' sidebar--new' : ''; ?>">
     <ul class="sidebar__wrapper">
     <?php foreach($projects as $key => $project) :
         $current_page = get_the_id() == $project->ID ? true : false;

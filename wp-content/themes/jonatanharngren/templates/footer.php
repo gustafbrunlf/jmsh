@@ -1,12 +1,12 @@
-<?php if ( get_field('sound', 'option') && is_page_template('template-main.php') || is_page_template('template-new-start.php') ) : ?>
-	<div id="sound-button"<?= is_admin_bar_showing() ? 'class="new"' : ''; ?>><?= is_admin_bar_showing() ? 'Sound on/off' : 'Sound'; ?></div>
+<?php if ( get_field('sound', 'option') && is_page_template('template-main.php') || is_page_template('template-new-start.php') || is_single() ) : ?>
+	<div id="sound-button"<?= is_user_logged_in() ? 'class="new"' : ''; ?>><?= is_user_logged_in() ? 'Sound on/off' : 'Sound'; ?></div>
 
 	<audio id="sound" loop autoplay>
 		 <source src="<?= get_field('sound', 'option'); ?>" type="audio/mpeg">
 	</audio>
 <?php endif; ?>
 
-<footer class="footer<?= is_admin_bar_showing() ? ' new' : ''; ?>" role="contentinfo">
+<footer class="footer<?= is_user_logged_in() ? ' new' : ''; ?>" role="contentinfo">
   	<?php wp_nav_menu(); ?>
 </footer>
 

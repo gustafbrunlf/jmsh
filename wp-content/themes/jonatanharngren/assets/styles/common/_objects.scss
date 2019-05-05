@@ -19,14 +19,16 @@
     @extend .row;
     padding-top: 30px;
 
-    @media (min-width: 1100px) {
-        margin-left: -30px;
-        margin-right: -30px;
-    }
-
     &__column {
         @extend .col-xs-12;
         color: inherit;
+
+        @media (min-width: 1100px) {
+            &[class] {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
 
         &[data-size="6"] {
             @extend .col-lg-6;
@@ -36,17 +38,14 @@
         }
         &[data-size="3"] {
             @extend .col-lg-3;
+            padding-left: 5px;
+            padding-right: 5px;
         }
         &[data-size="2"] {
             @media (min-width: 992px) {
-                width: 20%
-            }
-        }
-
-        @media (min-width: 1100px) {
-            &[class] {
-                padding-left: 30px;
-                padding-right: 30px;
+                width: 20%;
+                padding-left: 5px;
+                padding-right: 5px;
             }
         }
     }

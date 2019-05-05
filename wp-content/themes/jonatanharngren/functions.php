@@ -33,3 +33,5 @@ function custom_login_logo() {
 	echo '<style type="text/css">body.login { background-image: url(https://video-images.vice.com/articles/59f775e48e4e2008860fb7c7/lede/1509484300456-Royale-at-Starbucks-fixed.png); background-size: cover; background-position: center; background-repeat: no-repeat; } #login h1 a { display: none; }</style>';
 }
 add_action('login_head', 'custom_login_logo');
+
+add_filter( 'show_admin_bar', '__return_false' );
