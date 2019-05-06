@@ -42,16 +42,19 @@
           if( attribute === '#form'  ) {
             $('.form__popup').addClass('form__popup--open');
           }
+          $('body').addClass('no-scroll');
         });
 
         $(document).on("click", '.popup__close, .popup', function(event){
             if(!$(event.target).is('.popup__wrapper')) {
                 $('.popup').removeClass('popup__open');
+                $('body').removeClass('no-scroll');
             }
         });
 
         $(document).on("click", '.form__close', function(event){
             $('.form__popup').removeClass('form__popup--open');
+            $('body').removeClass('no-scroll');
         });
 
         $(document).on("click", '#sound-button', function(event){
@@ -113,6 +116,7 @@
                 class: 'popup__close',
                 html: '<span class="t-visually-hidden">Close popup</span>'
             }).appendTo(popupWrapper);
+            $('body').addClass('no-scroll');
         });
       },
       finalize: function() {

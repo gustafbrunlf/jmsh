@@ -93,10 +93,11 @@
     }
     .popup__wrapper {
 		position: absolute;
-		max-height: 80%;
         max-width: 80%;
         padding-left: 0;
         padding-right: 0;
+		top: 0;
+		transform: none;
     }
     .popup__close {
         top: 10px;

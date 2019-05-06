@@ -7,6 +7,10 @@ body {
     min-height: 100vh;
     flex-direction: column;
     background-color: $black;
+
+    &.no-scroll {
+      overflow: hidden;
+    }
 }
 
 .main {
@@ -32,7 +36,7 @@ body {
     &.new {
         left: initial;
         right: 0;
-        bottom: 94px;
+        bottom: 54px;
     }
 }
 .page-template-template-start .header, .page-template-template-start .footer {
