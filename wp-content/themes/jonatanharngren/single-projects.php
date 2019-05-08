@@ -18,8 +18,8 @@ endif;
     <div class="o-width-limiter">
         <h2 class="c-project__subheader"><?= get_the_title(); ?></h2>
         <?= the_content(); ?>
-
-        <?php get_template_part('templates/projects/project-grid'); ?>
     </div>
+
+    <?php get_template_part('templates/projects/project-grid'); ?>
 </div>
 <?php endwhile; ?>

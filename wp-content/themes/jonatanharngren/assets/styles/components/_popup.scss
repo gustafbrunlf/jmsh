@@ -34,6 +34,7 @@
     		display: block;
     		text-transform: uppercase;
     		margin-bottom: 10px;
+			color: inherit;
     	}
 
     	span {
@@ -72,7 +73,7 @@
 		    left: 10px;
 			width: 15px;
 		    height: 1px;
-		    background: $white;
+		    background: currentColor;
 		}
 
 		&:before {
@@ -84,6 +85,34 @@
 			transform: rotate(-45deg);
 		}
     }
+	&.new {
+		h4 {
+	    	font-size: 1.5rem;
+			padding: 10px 0 5px;
+			text-align: center;
+			text-transform: uppercase;
+			border-bottom: 2px dashed currentColor;
+		}
+		.popup__email p {
+			margin: 0;
+		}
+		ul {
+			padding: 0;
+			list-style-type: none;
+			text-align: center;
+			margin: 0;
+		}
+		li {
+			display: inline-block;
+			margin: 0 10px;
+
+			svg {
+				height: 24px;
+				width: 30px;
+				fill: currentColor;
+			}
+		}
+	}
 }
 .popup--image {
 	overflow: scroll;

@@ -45,11 +45,9 @@
           $('body').addClass('no-scroll');
         });
 
-        $(document).on("click", '.popup__close, .popup', function(event){
-            if(!$(event.target).is('.popup__wrapper')) {
-                $('.popup').removeClass('popup__open');
-                $('body').removeClass('no-scroll');
-            }
+        $(document).on("click", '.popup__close, .popup__image', function(event){
+            $('.popup').removeClass('popup__open');
+            $('body').removeClass('no-scroll');
         });
 
         $(document).on("click", '.form__close', function(event){
