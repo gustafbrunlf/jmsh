@@ -15,15 +15,18 @@
 	&__item {
 		padding: 5px 20px;
 		color: rgb(249, 249, 249);
-		font-size: 50px;
+		font-size: 36px;
 		line-height: 1;
+		opacity: 1;
+		transition: opacity 0.1s ease;
 
 		a {
 			color: rgb(249, 249, 249);
 		}
 
 		&:hover {
-			text-decoration: underline;
+			opacity: 0;
+			text-decoration: none;
 		}
 
 		&--active {
@@ -32,17 +35,6 @@
 
 		@media (max-width: $xs-screen) {
 			font-size: 30px;
-		}
-	}
-	&--new {
-		.sidebar__item {
-			font-size: 36px;
-			opacity: 1;
-			transition: opacity 0.1s ease;
-			&:hover {
-				opacity: 0;
-				text-decoration: none;
-			}
 		}
 	}
 }

@@ -9,6 +9,7 @@ function create_post_type_projects() {
       ),
       'public' => true,
       'has_archive' => true,
+      'show_in_rest' => true,
     )
   );
 }

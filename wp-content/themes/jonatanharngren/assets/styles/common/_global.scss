@@ -20,8 +20,8 @@ body {
 
 #sound-button {
 	position: fixed;
-	left: 0;
-	bottom: 4px;
+	right: 0;
+	bottom: 54px;
 	padding: 10px 7px;
 	text-transform: uppercase;
 	color: rgb(249, 249, 249);
@@ -32,12 +32,6 @@ body {
 	@media (max-width: 1024px) {
 		display: none;
 	}
-
-    &.new {
-        left: initial;
-        right: 0;
-        bottom: 54px;
-    }
 }
 .page-template-template-start .header, .page-template-template-start .footer {
     display: none;
