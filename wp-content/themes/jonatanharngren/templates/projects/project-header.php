@@ -22,7 +22,7 @@
 <div class="c-project-header__content<?= $video ? ' c-project-header__content--video' : ''; ?>"<?= $style && !$video ? ' style="' . $style . '"' : ''; ?>>
 	<?php
 	if( $video ) : ?>
-		<video controls autoplay muted loop>
+		<video autoplay muted loop>
 			<source src="<?= $video['url']; ?>"
 					type="video/webm">
 			<source src="<?= $video['url']; ?>"

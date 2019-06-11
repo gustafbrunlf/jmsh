@@ -888,6 +888,25 @@ acf_add_local_field_group(array(
 	'title' => 'Project',
 	'fields' => array(
 		array(
+			'key' => 'field_5cffe0761d6e2',
+			'label' => 'Meny namn',
+			'name' => 'menu_name',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '30',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+		array(
 			'key' => 'field_5cc1ef1fe1b39',
 			'label' => 'Video/image full width',
 			'name' => '',
