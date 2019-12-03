@@ -1,4 +1,4 @@
-<?php if ( get_field('sound', 'option') && is_page_template('template-main.php') || is_page_template('template-new-start.php') ) : ?>
+<?php if ( get_field('sound', 'option') ) : ?>
 	<div id="sound-button">Sound on/off</div>
 
 	<audio id="sound" loop autoplay>

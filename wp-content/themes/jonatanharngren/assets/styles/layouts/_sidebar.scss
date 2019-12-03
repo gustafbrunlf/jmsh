@@ -3,7 +3,6 @@
 	top: 50%;
 	transform: translate(0, -50%);
 	right: 0;
-	max-width: 150px;
 	z-index: 100;
 
 	&__wrapper {
@@ -14,14 +13,14 @@
 
 	&__item {
 		padding: 5px 20px;
-		color: rgb(249, 249, 249);
-		font-size: 36px;
+		color: #000;
+		font-size: 30px;
 		line-height: 1;
 		opacity: 1;
 		transition: opacity 0.1s ease;
 
 		a {
-			color: rgb(249, 249, 249);
+			color: #000;
 		}
 
 		&:hover {
@@ -29,12 +28,8 @@
 			text-decoration: none;
 		}
 
-		&--active {
-			text-decoration: underline;
-		}
-
 		@media (max-width: $xs-screen) {
-			font-size: 30px;
+			font-size: 24px;
 		}
 	}
 }
