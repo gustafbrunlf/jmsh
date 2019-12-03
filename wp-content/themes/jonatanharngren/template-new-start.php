@@ -17,7 +17,28 @@ endif;
 if( $text_color = get_field('text_color') ) :
     $style .= 'color:' . $text_color . ';';
 endif;
+
+$color = get_field('menu_color', get_the_id()) ? ' style="color:' . get_field('menu_color', get_the_id()) . ';"' : '';
 ?>
+<header class="f-header" role="banner">
+    <div class="f-header__logo-wrapper">
+    	<div class="f-header__close-logo"></div>
+        <a href="<?= get_home_url(); ?>" class="f-header__logo">
+            <?php if(get_field('logo', get_the_id())) : ?>
+                <img src="<?= wp_get_attachment_image_src(get_field('logo', get_the_id()), 'full')[0]; ?>">
+            <?php else : ?>
+               <img src="<?=get_template_directory_uri()?>/dist/images/logomenupage.png">
+            <?php endif; ?>
+        </a>
+    </div>
+    <?php if($color): ?>
+        <div class="f-header__menu"<?= $color; ?>>
+    <?php endif; ?>
+        <?php wp_nav_menu(); ?>
+    <?php if($color): ?>
+        </div>
+    <?php endif; ?>
+</header>
 <div class="c-project" style="<?= $style; ?>">
     <div class="c-project__header"<?= get_field('fullwidth_background_color') ? 'style="background-color:' . get_field('fullwidth_background_color') .';"' : ''; ?>>
         <?php get_template_part('templates/projects/project-header'); ?>

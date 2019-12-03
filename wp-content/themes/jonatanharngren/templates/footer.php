@@ -1,3 +1,6 @@
+<footer class="footer" role="contentinfo">
+  	<?php wp_nav_menu(); ?>
+</footer>
 <?php if ( get_field('sound', 'option') ) : ?>
 	<div id="sound-button">Sound on/off</div>
 
@@ -5,11 +8,6 @@
 		 <source src="<?= get_field('sound', 'option'); ?>" type="audio/mpeg">
 	</audio>
 <?php endif; ?>
-
-<footer class="footer" role="contentinfo">
-  	<?php wp_nav_menu(); ?>
-</footer>
-
 <div class="popup">
 	<div class="popup__wrapper" style="background-color: <?= get_field('background-color', 'option'); ?>; color: <?= get_field('text-color', 'option'); ?>;">
 		<div class="popup__close"><span class="t-visually-hidden">Close popup</span></div>
