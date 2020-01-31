@@ -53,5 +53,13 @@ $color = get_field('menu_color', get_the_id()) ? ' style="color:' . get_field('m
 
     <?php get_template_part('templates/projects/project-grid'); ?>
 </div>
+<?php if ( get_field('sound', 'option') || get_field('sound_project') ) : ?>
+	<div id="sound-button">Sound on/off</div>
+
+	<audio id="sound" loop autoplay>
+        <?php $source = get_field('sound_project') ? get_field('sound_project', get_the_id()) : get_field('sound', 'option'); ?>
+        <source src="<?= $source; ?>" type="audio/mpeg">
+	</audio>
+<?php endif; ?>
 <?php wp_reset_postdata();
 endwhile; ?>
