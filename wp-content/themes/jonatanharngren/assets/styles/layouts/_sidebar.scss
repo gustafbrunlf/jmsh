@@ -11,7 +11,7 @@
 		padding-left: 0;
 		margin: 0;
 		margin-right: 20px;
-		min-width: 280px;
+		min-width: 190px;
 
 		&--menu {
 			margin-bottom: 10px;
@@ -25,7 +25,7 @@
 		}
 
 		@media (max-width: $xs-screen) {
-			min-width: 220px;
+			min-width: 100px;
 		}
 	}
 	&__wrapper:not(.sidebar__wrapper--menu) {
@@ -49,6 +49,7 @@
 			background: transparent;
 			border: 0;
 			padding: 0;
+			text-transform: uppercase;
 
 			&.active {
 				text-decoration: underline;
