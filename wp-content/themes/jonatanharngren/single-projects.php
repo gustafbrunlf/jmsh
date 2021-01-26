@@ -17,7 +17,7 @@ $color = get_field('menu_color', get_the_id()) ? ' style="color:' . get_field('m
             <?php if(get_field('logo', get_the_id())) : ?>
                 <img src="<?= wp_get_attachment_image_src(get_field('logo', get_the_id()), 'full')[0]; ?>">
             <?php else : ?>
-               <img src="<?=get_template_directory_uri()?>/dist/images/logomenupage.png">
+               <img src="<?=get_template_directory_uri()?>/dist/images/logo-jonatan.png">
             <?php endif; ?>
         </a>
     </div>

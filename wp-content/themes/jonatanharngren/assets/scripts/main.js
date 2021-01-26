@@ -116,6 +116,19 @@
             }).appendTo(popupWrapper);
             $('body').addClass('no-scroll');
         });
+
+        $(document).on("click", '.sidebar__item button', function(event){
+            event.preventDefault();
+            $('.sidebar__wrapper').not('.sidebar__wrapper--menu').hide();
+            var dataName = $(this).attr('data-project-name');
+            $('.sidebar__wrapper[data-project-ul="' + dataName + '"]').show();
+            $('.sidebar__item button').removeClass('active');
+            $(this).addClass('active');
+        });
+
+        var activeSidebar = $('.sidebar__item--active');
+        activeAttr = activeSidebar.parent('ul').attr('data-project-ul');
+        $('.sidebar__item button[data-project-name="' + activeAttr + '"]').click();
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired

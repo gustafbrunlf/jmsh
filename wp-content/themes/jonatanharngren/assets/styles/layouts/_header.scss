@@ -6,11 +6,12 @@
 
 	@media (min-width: 1200px) {
 		position: fixed;
+		top: 50px;
 		left: 0;
-		bottom: 50px;
 		background-color: transparent;
 		padding: 0 0 0 20px;
 		z-index: 1001;
+		display: flex;
 	}
 
 	&__logo-wrapper {
@@ -46,7 +47,7 @@
     		left: 4px;
 			width: 15px;
 		    height: 1px;
-		    background: $white;
+		    background: $black;
 		}
 
 		&:before {
@@ -64,10 +65,17 @@
 		ul {
 			list-style-type: none;
 			padding: 0;
+			margin: 0;
 		}
 		li {
 			display: inline-block;
-			margin-right: 10px;
+			margin-right: 5px;
+
+			&::before {
+				content: "/";
+				margin-right: 5px;
+				color: $white;
+			}
 		}
 		a {
 			color: $white;
@@ -84,10 +92,21 @@
 	}
 }
 .f-header {
+	&__menu {
+		padding-top: 5px;
+		margin-left: 10px;
+	}
 	&__menu a {
+		font-family: "Union", sans-serif;
+		color: inherit !important;
+	}
+	&__menu li::before {
 		color: inherit !important;
 	}
 	@media (max-width: 1199px) {
 		display: none;
 	}
+}
+.about .f-header {
+	bottom: 10px;
 }
