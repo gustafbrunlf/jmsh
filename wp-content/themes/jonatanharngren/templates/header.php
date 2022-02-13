@@ -2,7 +2,7 @@
     <div class="header__logo-wrapper">
     	<div class="header__close-logo"></div>
         <a href="<?= get_home_url(); ?>" class="header__logo">
-        	<img src="<?=get_template_directory_uri()?>/dist/images/logomenupage.png">
+        	<img src="<?=get_template_directory_uri()?>/dist/images/logo-jonatan.png">
         </a>
     </div>
     <?php wp_nav_menu(); ?>

@@ -7,12 +7,15 @@
     <ul class="sidebar__wrapper sidebar__wrapper--menu"<?= $color; ?>>
     <?php foreach($all_projects as $key => $project) : ?>
         <li class="sidebar__item"<?= $color; ?>>
-            <button type="button" class="<?= $key == 0 ? 'active' : ''; ?>" data-project-name="<?= strtolower($project['menu-name']); ?>"><?= $project['menu-name']; ?></button>
+            <button type="button" data-project-name="<?= strtolower($project['menu-name']); ?>"><?= $project['menu-name']; ?></button>
         </li>
     <?php endforeach; ?>
+        <li class="sidebar__item sidebar__item--back"<?= $color; ?>>
+            <button type="button" data-back>Back</button>
+        </li>
     </ul>
 <?php foreach($all_projects as $key => $project) : ?>
-        <ul class="sidebar__wrapper" data-project-ul="<?= strtolower($project['menu-name']); ?>"<?= $key == 0 ? ' style="display:block;"' : ''; ?>>
+        <ul class="sidebar__wrapper" data-project-ul="<?= strtolower($project['menu-name']); ?>">
             <?php foreach ($project['menu-project'] as $project) :
                 $current_page = get_the_id() == $project['project']->ID ? true : false;
             ?>

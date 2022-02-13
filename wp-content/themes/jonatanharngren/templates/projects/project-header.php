@@ -16,22 +16,26 @@
 
 	$video = get_field('fullwidth_video') ? get_field('fullwidth_video') : '';
 ?>
-<?php if(!get_field('full_width_layout')) : ?>
-<div class="o-width-limiter">
-<?php endif; ?>
-<div class="c-project-header__content<?= $video ? ' c-project-header__content--video' : ''; ?>"<?= $style && !$video ? ' style="' . $style . '"' : ''; ?>>
-	<?php
-	if( $video ) : ?>
-		<video autoplay muted loop>
-			<source src="<?= $video['url']; ?>"
-					type="video/webm">
-			<source src="<?= $video['url']; ?>"
-					type="video/mp4">
-			Sorry, your browser doesn't support embedded videos.
-		</video>
-    <?php endif; ?>
-	<h1 class="c-project-header__title" style="color:<?= $color; ?>"><?= $title; ?></h1>
-</div>
-<?php if(!get_field('full_width_layout')) : ?>
-</div>
+<?php if(!get_field('slideshow')): ?>
+	<?php if(!get_field('full_width_layout')) : ?>
+	<div class="o-width-limiter">
+	<?php endif; ?>
+	<div class="c-project-header__content<?= $video ? ' c-project-header__content--video' : ''; ?>"<?= $style && !$video ? ' style="' . $style . '"' : ''; ?>>
+		<?php
+		if( $video ) : ?>
+			<video autoplay muted loop>
+				<source src="<?= $video['url']; ?>"
+						type="video/webm">
+				<source src="<?= $video['url']; ?>"
+						type="video/mp4">
+				Sorry, your browser doesn't support embedded videos.
+			</video>
+	    <?php endif; ?>
+		<h1 class="c-project-header__title" style="color:<?= $color; ?>"><?= $title; ?></h1>
+	</div>
+	<?php if(!get_field('full_width_layout')) : ?>
+	</div>
+	<?php endif; ?>
+<?php else: ?>
+	<h1>haj</h1>
 <?php endif; ?>

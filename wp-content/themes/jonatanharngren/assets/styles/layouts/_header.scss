@@ -1,12 +1,12 @@
 .header, .f-header {
-	background-color: $black;
+	background-color: $white;
 	position: relative;
 	min-height: 60px;
 	padding: 0 100px;
 
 	@media (min-width: 1200px) {
 		position: fixed;
-		top: 50px;
+		top: 15px;
 		left: 0;
 		background-color: transparent;
 		padding: 0 0 0 20px;
